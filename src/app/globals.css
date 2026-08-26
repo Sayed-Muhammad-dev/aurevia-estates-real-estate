@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 245 241 234;
+  --foreground: 19 28 39;
+  --panel: 255 255 255;
+  --line: 218 211 201;
+  --accent: 201 168 113;
+  --accent-soft: 248 239 223;
+  --muted: 95 105 119;
+  --success: 22 163 74;
+  --warning: 245 158 11;
+  --danger: 220 38 38;
+}
+
+.dark {
+  --background: 14 18 24;
+  --foreground: 238 241 246;
+  --panel: 19 25 34;
+  --line: 45 57 73;
+  --accent: 214 181 124;
+  --accent-soft: 41 34 23;
+  --muted: 148 163 184;
+  --success: 74 222 128;
+  --warning: 251 191 36;
+  --danger: 248 113 113;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background font-sans text-foreground antialiased;
+  background-image:
+    radial-gradient(circle at top right, rgba(201, 168, 113, 0.1), transparent 28%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+}
+
+* {
+  @apply border-line;
+}
+
+.field {
+  @apply w-full rounded-2xl border border-line bg-background/80 px-4 py-3 text-foreground outline-none transition placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/20;
+}
+
+.shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.animate-page-in {
+  animation: page-in 0.55s ease-out;
+}
+
+.animate-modal-in {
+  animation: modal-in 0.28s ease-out;
+}
+
+.animate-hero-enter {
+  animation: hero-enter 0.8s ease-out both;
+}
+
+.stagger-grid > * {
+  animation: fade-up 0.6s ease-out both;
+}
+
+.stagger-grid > *:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.stagger-grid > *:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.stagger-grid > *:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.stagger-grid > *:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+.stagger-grid > *:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+.stagger-grid > *:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+.skeleton-shimmer {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.18) 50%, rgba(255, 255, 255, 0) 90%),
+    rgba(var(--foreground), 0.08);
+  background-size: 220% 100%;
+  animation: shimmer 1.35s linear infinite;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, rgba(19, 28, 39, 0.92), rgba(19, 28, 39, 0.72));
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -20% 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.12);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 113, 0.55);
+  border-radius: 9999px;
+}
