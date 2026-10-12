@@ -1,5 +1,8 @@
 # Aurevia Estates — Premium Real Estate Website
 
+> **Application upgrade — October 2026:** This repository now includes a persistent Node application API and an authenticated operations workspace at `/workspace`. Run `npm run admin:bootstrap` once, then follow [the application runbook](docs/FULLSTACK.md). CMS collections use reviewed draft/published snapshots; financial applications use protected operational records. Existing public deployments have not been changed. Older frontend descriptions below document the original interface and sample data.
+
+
 A property listing platform for a high-end estate agency: search, a filtered
 listings page with a sticky filter bar, property detail pages with galleries and
 agent contact, agent profiles, saved listings and a mortgage calculator.

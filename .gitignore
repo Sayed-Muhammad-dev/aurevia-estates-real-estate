@@ -8,3 +8,8 @@ build
 .DS_Store
 .vercel
 next-env.d.ts
+
+# Private durable application state
+.app-data/
+*.lock.tmp
+.next-production/

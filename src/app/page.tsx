@@ -1,4 +1,16 @@
-import { ArrowRight, BarChart3, Building2, CheckCircle2, Landmark, MoveRight, ShieldCheck, Sparkles } from "lucide-react";
+import { published } from "../../server/public-data.mjs";
+import type { Property, Agent } from "@/types";
+export const dynamic = "force-dynamic";
+import {
+  ArrowRight,
+  BarChart3,
+  Building2,
+  CheckCircle2,
+  Landmark,
+  MoveRight,
+  ShieldCheck,
+  Sparkles,
+} from "lucide-react";
 import Image from "next/image";
 import { AgentCard } from "@/components/agents/agent-card";
 import { MortgageCalculator } from "@/components/calculator/mortgage-calculator";
@@ -7,25 +19,32 @@ import { ContactForm } from "@/components/shared/contact-form";
 import { NewsletterForm } from "@/components/shared/newsletter-form";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { agents } from "@/data/agents";
-import { properties } from "@/data/properties";
+
 import { locations, marketStats, reviews, services } from "@/data/site";
 import { formatCompactPrice } from "@/lib/utils";
 
-export default function HomePage() {
-  const featured = properties.filter((property) => property.featured).slice(0, 3);
+export default async function HomePage() {
+  const properties = await published<Property>("properties");
+  const agents = await published<Agent>("agents");
+  const featured = properties
+    .filter((property) => property.featured)
+    .slice(0, 3);
 
   return (
     <>
       <section className="section">
         <div className="shell grid animate-hero-enter items-center gap-10 lg:grid-cols-[1.05fr,0.95fr]">
           <div>
-            <p className="text-sm uppercase tracking-[0.34em] text-accent">Curated luxury residences</p>
+            <p className="text-sm uppercase tracking-[0.34em] text-accent">
+              Curated luxury residences
+            </p>
             <h1 className="mt-5 font-display text-5xl leading-tight text-foreground md:text-7xl">
               Discover homes that feel worthy of the life built around them.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-              Aurevia Estates combines elevated presentation, intelligent search, and trusted advisory to help buyers, renters, and investors move with confidence.
+              Aurevia Estates combines elevated presentation, intelligent
+              search, and trusted advisory to help buyers, renters, and
+              investors move with confidence.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/listings" className="gap-2">
@@ -37,9 +56,16 @@ export default function HomePage() {
               </Button>
             </div>
 
-            <form action="/listings" className="mt-10 rounded-[2rem] border border-line bg-panel p-4 shadow-luxury">
+            <form
+              action="/listings"
+              className="mt-10 rounded-[2rem] border border-line bg-panel p-4 shadow-luxury"
+            >
               <div className="grid gap-4 lg:grid-cols-[2fr,1fr,1fr,auto]">
-                <input name="query" className="field" placeholder="Search by city, address, neighborhood, or property type" />
+                <input
+                  name="query"
+                  className="field"
+                  placeholder="Search by city, address, neighborhood, or property type"
+                />
                 <select name="mode" className="field">
                   <option value="all">Buy or rent</option>
                   <option value="buy">Buy</option>
@@ -63,8 +89,13 @@ export default function HomePage() {
                 { label: "Average close time", value: "19 days" },
                 { label: "Client retention", value: "92%" },
               ].map((stat) => (
-                <div key={stat.label} className="rounded-[1.75rem] border border-line bg-panel px-5 py-4">
-                  <p className="font-display text-3xl text-foreground">{stat.value}</p>
+                <div
+                  key={stat.label}
+                  className="rounded-[1.75rem] border border-line bg-panel px-5 py-4"
+                >
+                  <p className="font-display text-3xl text-foreground">
+                    {stat.value}
+                  </p>
                   <p className="mt-2 text-sm text-muted">{stat.label}</p>
                 </div>
               ))}
@@ -82,17 +113,30 @@ export default function HomePage() {
             <div className="hero-card absolute inset-0" />
             <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
               <div className="rounded-[2rem] border border-white/15 bg-white/10 p-6 text-white backdrop-blur">
-                <p className="text-sm uppercase tracking-[0.24em] text-white/70">Featured residence</p>
-                <h2 className="mt-3 font-display text-4xl">{featured[0].title}</h2>
+                <p className="text-sm uppercase tracking-[0.24em] text-white/70">
+                  Featured residence
+                </p>
+                <h2 className="mt-3 font-display text-4xl">
+                  {featured[0].title}
+                </h2>
                 <p className="mt-2 text-white/75">
                   {featured[0].area}, {featured[0].city}
                 </p>
                 <div className="mt-5 flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-3xl font-semibold">{formatCompactPrice(featured[0].price)}</p>
-                    <p className="text-sm text-white/70">{featured[0].bedrooms} beds · {featured[0].bathrooms} baths · {featured[0].areaSqft.toLocaleString()} sqft</p>
+                    <p className="text-3xl font-semibold">
+                      {formatCompactPrice(featured[0].price)}
+                    </p>
+                    <p className="text-sm text-white/70">
+                      {featured[0].bedrooms} beds · {featured[0].bathrooms}{" "}
+                      baths · {featured[0].areaSqft.toLocaleString()} sqft
+                    </p>
                   </div>
-                  <Button href={`/properties/${featured[0].slug}`} variant="secondary" className="border-white/20 bg-white/10 text-white hover:bg-white/15">
+                  <Button
+                    href={`/properties/${featured[0].slug}`}
+                    variant="secondary"
+                    className="border-white/20 bg-white/10 text-white hover:bg-white/15"
+                  >
                     View Property
                   </Button>
                 </div>
@@ -125,14 +169,25 @@ export default function HomePage() {
             />
             <div className="mt-8 space-y-4">
               {locations.map((location) => (
-                <div key={location.city} className="flex items-center justify-between rounded-[1.5rem] border border-line bg-background/60 p-4">
+                <div
+                  key={location.city}
+                  className="flex items-center justify-between rounded-[1.5rem] border border-line bg-background/60 p-4"
+                >
                   <div>
-                    <p className="text-xl font-medium text-foreground">{location.city}</p>
-                    <p className="mt-1 text-sm text-muted">{location.insight}</p>
+                    <p className="text-xl font-medium text-foreground">
+                      {location.city}
+                    </p>
+                    <p className="mt-1 text-sm text-muted">
+                      {location.insight}
+                    </p>
                   </div>
                   <div className="text-right">
-                    <p className="font-display text-3xl text-foreground">{location.listings}</p>
-                    <p className="text-xs uppercase tracking-[0.24em] text-muted">Active listings</p>
+                    <p className="font-display text-3xl text-foreground">
+                      {location.listings}
+                    </p>
+                    <p className="text-xs uppercase tracking-[0.24em] text-muted">
+                      Active listings
+                    </p>
                   </div>
                 </div>
               ))}
@@ -162,11 +217,16 @@ export default function HomePage() {
                 text: "Mortgage estimates, yield thinking, and budget filtering are built into the client journey.",
               },
             ].map((item) => (
-              <div key={item.title} className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury">
+              <div
+                key={item.title}
+                className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury"
+              >
                 <div className="inline-flex rounded-2xl bg-accent/10 p-3 text-accent">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-5 font-display text-3xl text-foreground">{item.title}</h3>
+                <h3 className="mt-5 font-display text-3xl text-foreground">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-sm leading-7 text-muted">{item.text}</p>
               </div>
             ))}
@@ -178,11 +238,19 @@ export default function HomePage() {
         <div className="shell">
           <div className="stagger-grid grid gap-6 lg:grid-cols-3">
             {services.map((service, index) => (
-              <div key={service} className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury">
-                <p className="text-sm uppercase tracking-[0.24em] text-accent">0{index + 1}</p>
-                <h3 className="mt-4 font-display text-3xl text-foreground">{service}</h3>
+              <div
+                key={service}
+                className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury"
+              >
+                <p className="text-sm uppercase tracking-[0.24em] text-accent">
+                  0{index + 1}
+                </p>
+                <h3 className="mt-4 font-display text-3xl text-foreground">
+                  {service}
+                </h3>
                 <p className="mt-3 text-sm leading-7 text-muted">
-                  Structured discovery, responsive communication, and polished delivery tailored to premium property expectations.
+                  Structured discovery, responsive communication, and polished
+                  delivery tailored to premium property expectations.
                 </p>
               </div>
             ))}
@@ -205,7 +273,10 @@ export default function HomePage() {
               "Book tours, compare homes, and estimate payments.",
               "Move forward with negotiation and closing support.",
             ].map((step, index) => (
-              <div key={step} className="rounded-[2rem] border border-line bg-panel p-6 text-center shadow-luxury">
+              <div
+                key={step}
+                className="rounded-[2rem] border border-line bg-panel p-6 text-center shadow-luxury"
+              >
                 <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-full bg-accent text-lg font-semibold text-slate-950">
                   {index + 1}
                 </div>
@@ -224,7 +295,11 @@ export default function HomePage() {
               title="Experienced agents who understand design, negotiation, and client discretion."
               description="Meet the advisors behind our strongest client outcomes."
             />
-            <Button href="/agents" variant="secondary" className="hidden md:inline-flex">
+            <Button
+              href="/agents"
+              variant="secondary"
+              className="hidden md:inline-flex"
+            >
               View all agents
             </Button>
           </div>
@@ -245,9 +320,16 @@ export default function HomePage() {
           />
           <div className="stagger-grid mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {marketStats.map((stat) => (
-              <div key={stat.label} className="rounded-[1.75rem] border border-line bg-background/60 p-5">
-                <p className="font-display text-4xl text-foreground">{stat.value}</p>
-                <p className="mt-3 text-base font-medium text-foreground">{stat.label}</p>
+              <div
+                key={stat.label}
+                className="rounded-[1.75rem] border border-line bg-background/60 p-5"
+              >
+                <p className="font-display text-4xl text-foreground">
+                  {stat.value}
+                </p>
+                <p className="mt-3 text-base font-medium text-foreground">
+                  {stat.label}
+                </p>
                 <p className="mt-2 text-sm text-muted">{stat.detail}</p>
               </div>
             ))}
@@ -258,13 +340,18 @@ export default function HomePage() {
       <section className="section">
         <div className="shell stagger-grid grid gap-6 lg:grid-cols-3">
           {reviews.map((review) => (
-            <blockquote key={review.id} className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury">
+            <blockquote
+              key={review.id}
+              className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury"
+            >
               <div className="inline-flex items-center gap-1 text-accent">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <CheckCircle2 key={index} className="h-4 w-4" />
                 ))}
               </div>
-              <p className="mt-5 text-lg leading-8 text-foreground">"{review.quote}"</p>
+              <p className="mt-5 text-lg leading-8 text-foreground">
+                "{review.quote}"
+              </p>
               <footer className="mt-6">
                 <p className="font-medium text-foreground">{review.name}</p>
                 <p className="text-sm text-muted">{review.role}</p>
@@ -288,14 +375,24 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-[2.5rem] border border-line bg-slate-950 p-8 text-white shadow-float">
-            <p className="text-sm uppercase tracking-[0.32em] text-accent">Take the next step</p>
-            <h2 className="mt-4 font-display text-5xl">Tell us what kind of home would feel right.</h2>
+            <p className="text-sm uppercase tracking-[0.32em] text-accent">
+              Take the next step
+            </p>
+            <h2 className="mt-4 font-display text-5xl">
+              Tell us what kind of home would feel right.
+            </h2>
             <p className="mt-4 max-w-xl text-base leading-8 text-slate-300">
-              Whether you are buying a flagship residence, securing a seasonal rental, or building a portfolio, Aurevia can curate the search with precision.
+              Whether you are buying a flagship residence, securing a seasonal
+              rental, or building a portfolio, Aurevia can curate the search
+              with precision.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/booking">Book a private visit</Button>
-              <Button href="/contact" variant="secondary" className="border-white/15 bg-white/10 text-white hover:bg-white/15">
+              <Button
+                href="/contact"
+                variant="secondary"
+                className="border-white/15 bg-white/10 text-white hover:bg-white/15"
+              >
                 Speak with an advisor
               </Button>
             </div>
@@ -305,7 +402,8 @@ export default function HomePage() {
                 <p className="font-medium">Weekly market intelligence</p>
               </div>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                Receive updates on pricing shifts, newly released homes, and high-opportunity rental inventory.
+                Receive updates on pricing shifts, newly released homes, and
+                high-opportunity rental inventory.
               </p>
               <div className="mt-5">
                 <NewsletterForm />
@@ -325,9 +423,15 @@ export default function HomePage() {
             />
             <div className="mt-8 rounded-[2rem] border border-line bg-panel p-6 shadow-luxury">
               <p className="text-sm leading-7 text-muted">
-                Prefer a guided search? Start with a message, then continue with saved properties, agent profiles, and visit scheduling across the platform.
+                Prefer a guided search? Start with a message, then continue with
+                saved properties, agent profiles, and visit scheduling across
+                the platform.
               </p>
-              <Button href="/contact" variant="secondary" className="mt-6 gap-2">
+              <Button
+                href="/contact"
+                variant="secondary"
+                className="mt-6 gap-2"
+              >
                 Open full contact page
                 <MoveRight className="h-4 w-4" />
               </Button>

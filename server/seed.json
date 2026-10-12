@@ -1,0 +1,1344 @@
+{
+  "properties": [
+    {
+      "id": "prop-01",
+      "slug": "serenity-cliffside-villa-malibu",
+      "title": "Serenity Cliffside Villa",
+      "city": "Malibu",
+      "area": "Carbon Beach",
+      "address": "1824 Carbon Beach Terrace, Malibu, CA",
+      "mode": "buy",
+      "type": "Villa",
+      "status": "Featured",
+      "price": 12400000,
+      "bedrooms": 6,
+      "bathrooms": 7,
+      "areaSqft": 6820,
+      "yearBuilt": 2021,
+      "furnished": true,
+      "parking": 4,
+      "featured": true,
+      "rating": 4.9,
+      "views": 2841,
+      "images": [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Cliffside villa with infinity pool overlooking the ocean",
+      "description": "An oceanfront estate designed for privacy, entertaining, and panoramic sunset living. The home pairs warm natural stone, double-height glazing, and resort-style outdoor spaces with a highly efficient smart-home backbone.",
+      "keyFeatures": [
+        "Infinity-edge pool",
+        "Wine cellar",
+        "Private screening room",
+        "Detached guest suite"
+      ],
+      "amenities": [
+        "Private Pool",
+        "Concierge",
+        "Smart Home",
+        "Cinema",
+        "Sea View",
+        "Parking"
+      ],
+      "nearby": [
+        {
+          "name": "Nobu Malibu",
+          "distance": "4 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Pepperdine University",
+          "distance": "11 min",
+          "type": "Education"
+        },
+        {
+          "name": "Malibu Country Mart",
+          "distance": "6 min",
+          "type": "Shopping"
+        }
+      ],
+      "floorPlan": {
+        "label": "Three-level entertainment layout",
+        "description": "Main living pavilion, private bedroom wing, and lower-level leisure suite with direct terrace access.",
+        "dimensions": "112 ft x 84 ft"
+      },
+      "coordinates": {
+        "x": 68,
+        "y": 38
+      },
+      "agentId": "agent-01"
+    },
+    {
+      "id": "prop-02",
+      "slug": "aurora-sky-penthouse-miami",
+      "title": "Aurora Sky Penthouse",
+      "city": "Miami",
+      "area": "Brickell",
+      "address": "300 Biscayne Boulevard Way, Miami, FL",
+      "mode": "buy",
+      "type": "Penthouse",
+      "status": "For Sale",
+      "price": 8750000,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "areaSqft": 4210,
+      "yearBuilt": 2023,
+      "furnished": true,
+      "parking": 3,
+      "featured": true,
+      "rating": 4.8,
+      "views": 1976,
+      "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Modern penthouse living room with skyline windows",
+      "description": "A full-floor penthouse with private elevator arrival, sunrise and bay-facing terraces, and refined interior detailing curated for executive city living.",
+      "keyFeatures": [
+        "Private elevator lobby",
+        "Chef's kitchen",
+        "Dual terraces",
+        "Spa primary suite"
+      ],
+      "amenities": [
+        "Concierge",
+        "Smart Home",
+        "Gym",
+        "Rooftop",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Brickell City Centre",
+          "distance": "5 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Bayfront Park",
+          "distance": "8 min",
+          "type": "Leisure"
+        },
+        {
+          "name": "Southside Elementary",
+          "distance": "9 min",
+          "type": "Education"
+        }
+      ],
+      "floorPlan": {
+        "label": "Single-floor skyline residence",
+        "description": "Open-plan entertaining zone balanced by a private bedroom corridor and service kitchen spine.",
+        "dimensions": "89 ft x 52 ft"
+      },
+      "coordinates": {
+        "x": 54,
+        "y": 56
+      },
+      "agentId": "agent-03"
+    },
+    {
+      "id": "prop-03",
+      "slug": "harrison-townhouse-tribeca",
+      "title": "Harrison Townhouse",
+      "city": "New York",
+      "area": "Tribeca",
+      "address": "48 Harrison Street, New York, NY",
+      "mode": "buy",
+      "type": "Townhouse",
+      "status": "For Sale",
+      "price": 6350000,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "areaSqft": 3890,
+      "yearBuilt": 2019,
+      "furnished": false,
+      "parking": 1,
+      "featured": false,
+      "rating": 4.7,
+      "views": 1543,
+      "images": [
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1464890100898-a385f744067f?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Refined townhouse exterior with warm evening lighting",
+      "description": "A restored brick townhouse that blends classic New York proportions with modern, gallery-like interiors and a landscaped private garden.",
+      "keyFeatures": [
+        "Landscaped courtyard",
+        "Library level",
+        "Custom millwork",
+        "Skylit staircase"
+      ],
+      "amenities": [
+        "Home Office",
+        "Smart Home",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Hudson River Park",
+          "distance": "6 min",
+          "type": "Leisure"
+        },
+        {
+          "name": "Washington Market School",
+          "distance": "7 min",
+          "type": "Education"
+        },
+        {
+          "name": "Whole Foods Tribeca",
+          "distance": "4 min",
+          "type": "Shopping"
+        }
+      ],
+      "floorPlan": {
+        "label": "Four-story townhouse flow",
+        "description": "Entertaining on the parlor floor, private bedroom stack above, and lower lounge opening to the rear garden.",
+        "dimensions": "22 ft x 78 ft"
+      },
+      "coordinates": {
+        "x": 36,
+        "y": 42
+      },
+      "agentId": "agent-02"
+    },
+    {
+      "id": "prop-04",
+      "slug": "atlas-loft-soho",
+      "title": "Atlas Design Loft",
+      "city": "New York",
+      "area": "SoHo",
+      "address": "137 Greene Street, New York, NY",
+      "mode": "rent",
+      "type": "Loft",
+      "status": "For Rent",
+      "price": 18500,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "areaSqft": 2180,
+      "yearBuilt": 2018,
+      "furnished": true,
+      "parking": 0,
+      "featured": false,
+      "rating": 4.8,
+      "views": 1128,
+      "images": [
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Large loft interior with exposed textures and designer furniture",
+      "description": "A furnished SoHo loft tailored for creative professionals and international tenants seeking a flexible, highly walkable Manhattan base.",
+      "keyFeatures": [
+        "Keyed elevator entry",
+        "Designer furnishings",
+        "Sound-treated office nook",
+        "Integrated storage wall"
+      ],
+      "amenities": [
+        "Concierge",
+        "Home Office",
+        "Smart Home",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Dominique Ansel Bakery",
+          "distance": "3 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Mercer Street Shops",
+          "distance": "2 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Spring Street Subway",
+          "distance": "4 min",
+          "type": "Transit"
+        }
+      ],
+      "floorPlan": {
+        "label": "Open loft studio plan",
+        "description": "Flexible central living core with split sleeping suites and perimeter storage zones.",
+        "dimensions": "58 ft x 37 ft"
+      },
+      "coordinates": {
+        "x": 33,
+        "y": 47
+      },
+      "agentId": "agent-02"
+    },
+    {
+      "id": "prop-05",
+      "slug": "harbor-light-waterfront-residence",
+      "title": "Harbor Light Residence",
+      "city": "Miami",
+      "area": "Surfside",
+      "address": "911 Collins Avenue, Surfside, FL",
+      "mode": "rent",
+      "type": "Waterfront",
+      "status": "Featured",
+      "price": 32000,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "areaSqft": 3360,
+      "yearBuilt": 2022,
+      "furnished": true,
+      "parking": 2,
+      "featured": true,
+      "rating": 4.9,
+      "views": 2192,
+      "images": [
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Waterfront residence with terrace and ocean view",
+      "description": "A fully serviced waterfront lease with private beach access, polished limestone interiors, and a hospitality-grade amenity package.",
+      "keyFeatures": [
+        "Beach club access",
+        "Sunrise terrace",
+        "Owner's pantry",
+        "Spa bath suite"
+      ],
+      "amenities": [
+        "Private Pool",
+        "Concierge",
+        "Gym",
+        "Sea View",
+        "Parking"
+      ],
+      "nearby": [
+        {
+          "name": "Bal Harbour Shops",
+          "distance": "6 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Surfside Beach",
+          "distance": "1 min",
+          "type": "Leisure"
+        },
+        {
+          "name": "The Surf Club",
+          "distance": "3 min",
+          "type": "Dining"
+        }
+      ],
+      "floorPlan": {
+        "label": "Split-bedroom waterfront plan",
+        "description": "Public entertaining spaces open fully to the sea-facing terrace while private suites remain insulated from guest flow.",
+        "dimensions": "77 ft x 44 ft"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 62
+      },
+      "agentId": "agent-03"
+    },
+    {
+      "id": "prop-06",
+      "slug": "verdant-ridge-estate-austin",
+      "title": "Verdant Ridge Estate",
+      "city": "Austin",
+      "area": "West Lake Hills",
+      "address": "24 Verdant Ridge Drive, Austin, TX",
+      "mode": "buy",
+      "type": "Villa",
+      "status": "For Sale",
+      "price": 4950000,
+      "bedrooms": 5,
+      "bathrooms": 6,
+      "areaSqft": 5740,
+      "yearBuilt": 2020,
+      "furnished": false,
+      "parking": 3,
+      "featured": false,
+      "rating": 4.6,
+      "views": 1324,
+      "images": [
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566752734-89f8f76b1f45?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Contemporary hillside estate with outdoor living pavilion",
+      "description": "A private hillside compound with layered terraces, mature landscaping, and a clean-lined interior palette suited to family living and formal hosting.",
+      "keyFeatures": [
+        "Hill country views",
+        "Outdoor kitchen",
+        "Library office",
+        "Temperature-controlled garage"
+      ],
+      "amenities": [
+        "Private Pool",
+        "Home Office",
+        "Gym",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Westlake High School",
+          "distance": "8 min",
+          "type": "Education"
+        },
+        {
+          "name": "Barton Creek Greenbelt",
+          "distance": "10 min",
+          "type": "Leisure"
+        },
+        {
+          "name": "Downtown Austin",
+          "distance": "16 min",
+          "type": "Transit"
+        }
+      ],
+      "floorPlan": {
+        "label": "Courtyard estate arrangement",
+        "description": "Central family core, private suite wings, and an outdoor pavilion connected through a protected courtyard.",
+        "dimensions": "104 ft x 95 ft"
+      },
+      "coordinates": {
+        "x": 45,
+        "y": 71
+      },
+      "agentId": "agent-04"
+    },
+    {
+      "id": "prop-07",
+      "slug": "solara-residences-beverly-hills",
+      "title": "Solara Residences",
+      "city": "Los Angeles",
+      "area": "Beverly Hills",
+      "address": "9210 Foothill Crest Drive, Beverly Hills, CA",
+      "mode": "buy",
+      "type": "Apartment",
+      "status": "Featured",
+      "price": 7100000,
+      "bedrooms": 3,
+      "bathrooms": 4,
+      "areaSqft": 2980,
+      "yearBuilt": 2024,
+      "furnished": true,
+      "parking": 2,
+      "featured": true,
+      "rating": 4.9,
+      "views": 2630,
+      "images": [
+        "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Luxury apartment interior with soft neutral palette and terrace",
+      "description": "A newly delivered branded residence with hotel-style services, layered interiors, and direct access to concierge wellness amenities.",
+      "keyFeatures": [
+        "Private terrace",
+        "Valet-ready arrival",
+        "Custom stone kitchen",
+        "Wellness club access"
+      ],
+      "amenities": [
+        "Concierge",
+        "Smart Home",
+        "Gym",
+        "Rooftop",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Rodeo Drive",
+          "distance": "7 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Cedars-Sinai",
+          "distance": "11 min",
+          "type": "Healthcare"
+        },
+        {
+          "name": "Beverly Gardens Park",
+          "distance": "5 min",
+          "type": "Leisure"
+        }
+      ],
+      "floorPlan": {
+        "label": "Branded residence plan",
+        "description": "Formal entertaining zone along the terrace frontage with a private bedroom suite sequence tucked behind service spaces.",
+        "dimensions": "67 ft x 49 ft"
+      },
+      "coordinates": {
+        "x": 57,
+        "y": 33
+      },
+      "agentId": "agent-01"
+    },
+    {
+      "id": "prop-08",
+      "slug": "desert-crown-retreat-scottsdale",
+      "title": "Desert Crown Retreat",
+      "city": "Scottsdale",
+      "area": "North Scottsdale",
+      "address": "7612 Canyon Edge Road, Scottsdale, AZ",
+      "mode": "rent",
+      "type": "Villa",
+      "status": "For Rent",
+      "price": 21000,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "areaSqft": 4125,
+      "yearBuilt": 2021,
+      "furnished": true,
+      "parking": 3,
+      "featured": false,
+      "rating": 4.7,
+      "views": 980,
+      "images": [
+        "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Desert luxury villa with fire pit terrace",
+      "description": "A resort-inspired seasonal residence with sculpted desert landscaping, broad sunset views, and resort-caliber outdoor entertaining zones.",
+      "keyFeatures": [
+        "Fire pit lounge",
+        "Resort pool",
+        "Golf simulator",
+        "Integrated guest casita"
+      ],
+      "amenities": [
+        "Private Pool",
+        "Gym",
+        "Cinema",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Troon North Golf Club",
+          "distance": "7 min",
+          "type": "Leisure"
+        },
+        {
+          "name": "Pinnacle Peak",
+          "distance": "10 min",
+          "type": "Nature"
+        },
+        {
+          "name": "Kierland Commons",
+          "distance": "18 min",
+          "type": "Shopping"
+        }
+      ],
+      "floorPlan": {
+        "label": "Resort villa spread",
+        "description": "Main suite and guest casita flank a central living pavilion that opens directly to the pool deck.",
+        "dimensions": "96 ft x 68 ft"
+      },
+      "coordinates": {
+        "x": 22,
+        "y": 74
+      },
+      "agentId": "agent-04"
+    },
+    {
+      "id": "prop-09",
+      "slug": "juniper-row-loft-austin",
+      "title": "Juniper Row Loft",
+      "city": "Austin",
+      "area": "East Sixth",
+      "address": "412 Juniper Row, Austin, TX",
+      "mode": "rent",
+      "type": "Loft",
+      "status": "For Rent",
+      "price": 4200,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "areaSqft": 980,
+      "yearBuilt": 2019,
+      "furnished": true,
+      "parking": 1,
+      "featured": false,
+      "rating": 4.6,
+      "views": 1120,
+      "images": [
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Open-plan loft with exposed brick and factory windows",
+      "description": "A converted print works with the original brick and steel casements left intact. Twelve-foot ceilings, a mezzanine sleeping platform, and a short walk to the Sixth Street music venues, which is either the selling point or the reason to look elsewhere.",
+      "keyFeatures": [
+        "Exposed brick",
+        "Mezzanine level",
+        "Factory windows",
+        "Secure bike store"
+      ],
+      "amenities": [
+        "Smart Home",
+        "Home Office",
+        "Parking",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Franklin Barbecue",
+          "distance": "9 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Lady Bird Lake Trail",
+          "distance": "6 min",
+          "type": "Recreation"
+        },
+        {
+          "name": "Whole Foods Downtown",
+          "distance": "12 min",
+          "type": "Shopping"
+        }
+      ],
+      "floorPlan": {
+        "label": "Open loft with mezzanine",
+        "description": "Single volume with kitchen along the north wall and a sleeping mezzanine above the bathroom core.",
+        "dimensions": "44 ft x 26 ft"
+      },
+      "coordinates": {
+        "x": 42,
+        "y": 61
+      },
+      "agentId": "agent-03"
+    },
+    {
+      "id": "prop-10",
+      "slug": "beacon-hill-townhouse-boston",
+      "title": "Beacon Hill Federal Townhouse",
+      "city": "New York",
+      "area": "Gramercy",
+      "address": "27 Gramercy Park East, New York, NY",
+      "mode": "buy",
+      "type": "Townhouse",
+      "status": "For Sale",
+      "price": 6850000,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "areaSqft": 3940,
+      "yearBuilt": 1912,
+      "furnished": false,
+      "parking": 1,
+      "featured": true,
+      "rating": 4.8,
+      "views": 2210,
+      "images": [
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Federal-style townhouse facade with wrought-iron railings",
+      "description": "Five floors of a 1912 Federal-style townhouse, restored over two years with the original plasterwork and staircase retained. Park key included with the deed, which is the part that rarely comes back on the market.",
+      "keyFeatures": [
+        "Private park key",
+        "Original staircase",
+        "Garden level",
+        "Roof terrace"
+      ],
+      "amenities": [
+        "Home Office",
+        "Rooftop",
+        "Parking",
+        "Pet Friendly",
+        "Smart Home"
+      ],
+      "nearby": [
+        {
+          "name": "Gramercy Tavern",
+          "distance": "5 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Union Square",
+          "distance": "8 min",
+          "type": "Transit"
+        },
+        {
+          "name": "Baruch College",
+          "distance": "10 min",
+          "type": "Education"
+        }
+      ],
+      "floorPlan": {
+        "label": "Five-storey vertical layout",
+        "description": "Garden kitchen, parlour floor reception, two bedroom floors and a roof terrace above.",
+        "dimensions": "20 ft x 52 ft"
+      },
+      "coordinates": {
+        "x": 55,
+        "y": 30
+      },
+      "agentId": "agent-02"
+    },
+    {
+      "id": "prop-11",
+      "slug": "coral-way-apartment-miami",
+      "title": "Coral Way Garden Apartment",
+      "city": "Miami",
+      "area": "Coral Way",
+      "address": "1740 Coral Way, Miami, FL",
+      "mode": "rent",
+      "type": "Apartment",
+      "status": "For Rent",
+      "price": 3100,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "areaSqft": 1180,
+      "yearBuilt": 2016,
+      "furnished": false,
+      "parking": 1,
+      "featured": false,
+      "rating": 4.4,
+      "views": 860,
+      "images": [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Bright two-bedroom apartment with a planted terrace",
+      "description": "A ground-floor two-bedroom with a planted terrace twice the size the floor plan suggests, on the quiet side of the building away from Coral Way itself. Unfurnished, twelve-month minimum term.",
+      "keyFeatures": [
+        "Ground-floor terrace",
+        "Quiet aspect",
+        "In-unit laundry",
+        "Storage locker"
+      ],
+      "amenities": [
+        "Gym",
+        "Parking",
+        "Pet Friendly",
+        "Concierge"
+      ],
+      "nearby": [
+        {
+          "name": "Vizcaya Museum",
+          "distance": "8 min",
+          "type": "Culture"
+        },
+        {
+          "name": "Coral Way Elementary",
+          "distance": "4 min",
+          "type": "Education"
+        },
+        {
+          "name": "Brickell City Centre",
+          "distance": "14 min",
+          "type": "Shopping"
+        }
+      ],
+      "floorPlan": {
+        "label": "Two-bedroom lateral",
+        "description": "Split bedrooms either side of an open living and dining space opening onto the terrace.",
+        "dimensions": "38 ft x 31 ft"
+      },
+      "coordinates": {
+        "x": 71,
+        "y": 74
+      },
+      "agentId": "agent-04"
+    },
+    {
+      "id": "prop-12",
+      "slug": "camelback-desert-villa-scottsdale",
+      "title": "Camelback Desert Villa",
+      "city": "Scottsdale",
+      "area": "Paradise Valley",
+      "address": "6120 E Camelback Ridge, Scottsdale, AZ",
+      "mode": "buy",
+      "type": "Villa",
+      "status": "For Sale",
+      "price": 4750000,
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "areaSqft": 5240,
+      "yearBuilt": 2020,
+      "furnished": true,
+      "parking": 3,
+      "featured": true,
+      "rating": 4.7,
+      "views": 1940,
+      "images": [
+        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Low desert villa with a negative-edge pool facing red rock",
+      "description": "A single-storey villa set into the ridge so the roofline never breaks the horizon from the valley below. Deep overhangs keep the glazing shaded through summer, and the pool runs to a negative edge facing Camelback.",
+      "keyFeatures": [
+        "Negative-edge pool",
+        "Passive shading",
+        "Casita guest suite",
+        "Desert landscaping"
+      ],
+      "amenities": [
+        "Private Pool",
+        "Smart Home",
+        "Gym",
+        "Parking",
+        "Home Office"
+      ],
+      "nearby": [
+        {
+          "name": "Camelback Mountain Trailhead",
+          "distance": "7 min",
+          "type": "Recreation"
+        },
+        {
+          "name": "Scottsdale Fashion Square",
+          "distance": "12 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Phoenix Sky Harbor",
+          "distance": "22 min",
+          "type": "Transit"
+        }
+      ],
+      "floorPlan": {
+        "label": "Single-storey courtyard plan",
+        "description": "Living pavilion and bedroom wing wrapped around a central courtyard, with a detached casita.",
+        "dimensions": "96 ft x 68 ft"
+      },
+      "coordinates": {
+        "x": 30,
+        "y": 52
+      },
+      "agentId": "agent-01"
+    },
+    {
+      "id": "prop-13",
+      "slug": "silver-lake-hillside-apartment",
+      "title": "Silver Lake Hillside Apartment",
+      "city": "Los Angeles",
+      "area": "Silver Lake",
+      "address": "2208 Redcliff Street, Los Angeles, CA",
+      "mode": "rent",
+      "type": "Apartment",
+      "status": "For Rent",
+      "price": 5400,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "areaSqft": 1420,
+      "yearBuilt": 2018,
+      "furnished": true,
+      "parking": 2,
+      "featured": false,
+      "rating": 4.7,
+      "views": 1480,
+      "images": [
+        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Hillside apartment with a deck over the reservoir",
+      "description": "Two bedrooms on the hillside above the reservoir, with a deck that catches the light until late. Fully furnished to a good standard, and the walk down to Sunset Junction takes about eight minutes — the walk back rather longer.",
+      "keyFeatures": [
+        "Reservoir view deck",
+        "Furnished",
+        "Two parking spaces",
+        "Central air"
+      ],
+      "amenities": [
+        "Smart Home",
+        "Parking",
+        "Home Office",
+        "Pet Friendly",
+        "Rooftop"
+      ],
+      "nearby": [
+        {
+          "name": "Silver Lake Reservoir",
+          "distance": "3 min",
+          "type": "Recreation"
+        },
+        {
+          "name": "Sunset Junction",
+          "distance": "8 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Ivanhoe Elementary",
+          "distance": "6 min",
+          "type": "Education"
+        }
+      ],
+      "floorPlan": {
+        "label": "Two-bedroom with deck",
+        "description": "Living and dining opening onto the deck, with bedrooms set back into the hillside.",
+        "dimensions": "42 ft x 34 ft"
+      },
+      "coordinates": {
+        "x": 24,
+        "y": 44
+      },
+      "agentId": "agent-03"
+    },
+    {
+      "id": "prop-14",
+      "slug": "brickell-bay-waterfront-residence",
+      "title": "Brickell Bay Waterfront Residence",
+      "city": "Miami",
+      "area": "Brickell Key",
+      "address": "808 Brickell Key Drive, Miami, FL",
+      "mode": "buy",
+      "type": "Waterfront",
+      "status": "Featured",
+      "price": 8900000,
+      "bedrooms": 4,
+      "bathrooms": 5,
+      "areaSqft": 4180,
+      "yearBuilt": 2023,
+      "furnished": true,
+      "parking": 3,
+      "featured": true,
+      "rating": 4.9,
+      "views": 3120,
+      "images": [
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Waterfront residence with floor-to-ceiling glass facing the bay",
+      "description": "A corner residence on the twenty-eighth floor with glass on two sides, facing both the bay and the downtown skyline. Private lift lobby, a summer kitchen on the terrace, and building amenities that justify the maintenance charge.",
+      "keyFeatures": [
+        "Corner exposure",
+        "Private lift lobby",
+        "Terrace summer kitchen",
+        "Bay and skyline views"
+      ],
+      "amenities": [
+        "Sea View",
+        "Concierge",
+        "Gym",
+        "Private Pool",
+        "Smart Home",
+        "Parking"
+      ],
+      "nearby": [
+        {
+          "name": "Mandarin Oriental",
+          "distance": "2 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Brickell City Centre",
+          "distance": "7 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Metromover Brickell",
+          "distance": "5 min",
+          "type": "Transit"
+        }
+      ],
+      "floorPlan": {
+        "label": "Corner lateral residence",
+        "description": "Living and dining on the corner glass, bedroom wing along the north elevation, terrace wrapping both.",
+        "dimensions": "74 ft x 58 ft"
+      },
+      "coordinates": {
+        "x": 76,
+        "y": 70
+      },
+      "agentId": "agent-04"
+    },
+    {
+      "id": "prop-15",
+      "slug": "zilker-park-townhouse-austin",
+      "title": "Zilker Park Townhouse",
+      "city": "Austin",
+      "area": "Zilker",
+      "address": "1906 Bluebonnet Lane, Austin, TX",
+      "mode": "buy",
+      "type": "Townhouse",
+      "status": "For Sale",
+      "price": 1380000,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "areaSqft": 2140,
+      "yearBuilt": 2021,
+      "furnished": false,
+      "parking": 2,
+      "featured": false,
+      "rating": 4.5,
+      "views": 1340,
+      "images": [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Modern townhouse with black cladding and a small front yard",
+      "description": "Three bedrooms over two floors, four blocks from Zilker Park and Barton Springs. Built in 2021 to a proper spec — spray foam, tankless water, and a garage that actually fits two cars, which is not a given in this neighbourhood.",
+      "keyFeatures": [
+        "Four blocks to Zilker",
+        "Two-car garage",
+        "Spray-foam insulation",
+        "Fenced yard"
+      ],
+      "amenities": [
+        "Home Office",
+        "Parking",
+        "Pet Friendly",
+        "Smart Home"
+      ],
+      "nearby": [
+        {
+          "name": "Barton Springs Pool",
+          "distance": "6 min",
+          "type": "Recreation"
+        },
+        {
+          "name": "Zilker Elementary",
+          "distance": "4 min",
+          "type": "Education"
+        },
+        {
+          "name": "South Lamar",
+          "distance": "8 min",
+          "type": "Dining"
+        }
+      ],
+      "floorPlan": {
+        "label": "Two-storey townhouse",
+        "description": "Open ground floor with garage access, three bedrooms and laundry above.",
+        "dimensions": "26 ft x 44 ft"
+      },
+      "coordinates": {
+        "x": 39,
+        "y": 58
+      },
+      "agentId": "agent-03"
+    },
+    {
+      "id": "prop-16",
+      "slug": "point-dume-beach-cottage-malibu",
+      "title": "Point Dume Beach Cottage",
+      "city": "Malibu",
+      "area": "Point Dume",
+      "address": "6740 Dume Drive, Malibu, CA",
+      "mode": "rent",
+      "type": "Villa",
+      "status": "For Rent",
+      "price": 14500,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "areaSqft": 2260,
+      "yearBuilt": 1978,
+      "furnished": true,
+      "parking": 2,
+      "featured": false,
+      "rating": 4.6,
+      "views": 1760,
+      "images": [
+        "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Weathered cedar beach cottage behind a low dune",
+      "description": "A 1978 cedar cottage with beach-key access, renovated inside but deliberately left alone outside. Three bedrooms, an outdoor shower that gets more use than the indoor ones, and a lease that runs month to month after the first six.",
+      "keyFeatures": [
+        "Beach key access",
+        "Outdoor shower",
+        "Original cedar cladding",
+        "Month-to-month after six"
+      ],
+      "amenities": [
+        "Sea View",
+        "Pet Friendly",
+        "Parking",
+        "Home Office"
+      ],
+      "nearby": [
+        {
+          "name": "Westward Beach",
+          "distance": "3 min",
+          "type": "Recreation"
+        },
+        {
+          "name": "Point Dume Village",
+          "distance": "5 min",
+          "type": "Shopping"
+        },
+        {
+          "name": "Malibu High School",
+          "distance": "9 min",
+          "type": "Education"
+        }
+      ],
+      "floorPlan": {
+        "label": "Single-storey cottage",
+        "description": "Living and kitchen facing the dune, three bedrooms along the rear elevation.",
+        "dimensions": "58 ft x 39 ft"
+      },
+      "coordinates": {
+        "x": 63,
+        "y": 34
+      },
+      "agentId": "agent-01"
+    },
+    {
+      "id": "prop-17",
+      "slug": "tribeca-print-works-loft",
+      "title": "Tribeca Print Works Loft",
+      "city": "New York",
+      "area": "Tribeca",
+      "address": "88 Franklin Street, New York, NY",
+      "mode": "buy",
+      "type": "Loft",
+      "status": "For Sale",
+      "price": 5240000,
+      "bedrooms": 2,
+      "bathrooms": 3,
+      "areaSqft": 2980,
+      "yearBuilt": 1904,
+      "furnished": false,
+      "parking": 0,
+      "featured": true,
+      "rating": 4.8,
+      "views": 2680,
+      "images": [
+        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Cast-iron loft with columns and oversized north-facing windows",
+      "description": "A full-floor loft in a 1904 cast-iron building, with the columns, tin ceiling and north light left as found. Two bedrooms carved out of nearly three thousand square feet, so the living space is the point. Key-locked lift opens into the apartment.",
+      "keyFeatures": [
+        "Full-floor",
+        "Cast-iron columns",
+        "Key-locked lift",
+        "North light"
+      ],
+      "amenities": [
+        "Home Office",
+        "Concierge",
+        "Smart Home",
+        "Pet Friendly"
+      ],
+      "nearby": [
+        {
+          "name": "Frenchette",
+          "distance": "4 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Franklin Street Station",
+          "distance": "2 min",
+          "type": "Transit"
+        },
+        {
+          "name": "Washington Market Park",
+          "distance": "7 min",
+          "type": "Recreation"
+        }
+      ],
+      "floorPlan": {
+        "label": "Full-floor loft",
+        "description": "Lift opens into the living volume; two bedroom suites and a study occupy the south end.",
+        "dimensions": "96 ft x 31 ft"
+      },
+      "coordinates": {
+        "x": 51,
+        "y": 26
+      },
+      "agentId": "agent-02"
+    },
+    {
+      "id": "prop-18",
+      "slug": "arts-district-penthouse-los-angeles",
+      "title": "Arts District Penthouse",
+      "city": "Los Angeles",
+      "area": "Arts District",
+      "address": "530 Mateo Street, Los Angeles, CA",
+      "mode": "buy",
+      "type": "Penthouse",
+      "status": "For Sale",
+      "price": 3480000,
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "areaSqft": 2740,
+      "yearBuilt": 2022,
+      "furnished": true,
+      "parking": 2,
+      "featured": false,
+      "rating": 4.6,
+      "views": 1620,
+      "images": [
+        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=1600&q=80"
+      ],
+      "coverAlt": "Penthouse terrace with downtown skyline behind",
+      "description": "Top floor of a 2022 conversion, with a terrace running the full width of the building and the downtown skyline directly behind it. Three bedrooms, a proper study, and building parking for two — rare enough in the Arts District to be worth stating.",
+      "keyFeatures": [
+        "Full-width terrace",
+        "Skyline outlook",
+        "Two parking spaces",
+        "Dedicated study"
+      ],
+      "amenities": [
+        "Rooftop",
+        "Gym",
+        "Smart Home",
+        "Parking",
+        "Concierge",
+        "Home Office"
+      ],
+      "nearby": [
+        {
+          "name": "Bestia",
+          "distance": "5 min",
+          "type": "Dining"
+        },
+        {
+          "name": "Hauser & Wirth",
+          "distance": "6 min",
+          "type": "Culture"
+        },
+        {
+          "name": "Little Tokyo Station",
+          "distance": "11 min",
+          "type": "Transit"
+        }
+      ],
+      "floorPlan": {
+        "label": "Penthouse with wrap terrace",
+        "description": "Living and kitchen opening to the terrace, bedrooms and study along the internal elevation.",
+        "dimensions": "68 ft x 42 ft"
+      },
+      "coordinates": {
+        "x": 27,
+        "y": 47
+      },
+      "agentId": "agent-02"
+    }
+  ],
+  "agents": [
+    {
+      "id": "agent-01",
+      "slug": "elena-marchetti",
+      "name": "Elena Marchetti",
+      "title": "Senior Luxury Advisor",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+      "experience": 12,
+      "activeListings": 18,
+      "rating": 4.9,
+      "reviews": 126,
+      "languages": [
+        "English",
+        "Italian",
+        "French"
+      ],
+      "phone": "+1 (310) 555-0148",
+      "email": "elena@aureviaestates.com",
+      "specialization": [
+        "Waterfront homes",
+        "International buyers",
+        "Architecture-led estates"
+      ],
+      "bio": "Elena leads high-value coastal and urban acquisitions with a calm, analytics-driven approach. Clients rely on her for discreet negotiations, presentation strategy, and access to off-market opportunities.",
+      "serviceAreas": [
+        "Beverly Hills",
+        "Malibu",
+        "Santa Monica"
+      ]
+    },
+    {
+      "id": "agent-02",
+      "slug": "nathan-brooks",
+      "name": "Nathan Brooks",
+      "title": "Principal Broker",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
+      "experience": 15,
+      "activeListings": 24,
+      "rating": 4.8,
+      "reviews": 151,
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "phone": "+1 (646) 555-0194",
+      "email": "nathan@aureviaestates.com",
+      "specialization": [
+        "Townhouses",
+        "Investment portfolios",
+        "Relocation"
+      ],
+      "bio": "Nathan oversees transaction strategy across the Aurevia network. He is known for structured communication, investor fluency, and fast-moving deal execution without sacrificing client trust.",
+      "serviceAreas": [
+        "Tribeca",
+        "SoHo",
+        "Upper East Side"
+      ]
+    },
+    {
+      "id": "agent-03",
+      "slug": "maya-chen",
+      "name": "Maya Chen",
+      "title": "Private Client Director",
+      "image": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80",
+      "experience": 9,
+      "activeListings": 16,
+      "rating": 4.9,
+      "reviews": 98,
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "phone": "+1 (415) 555-0163",
+      "email": "maya@aureviaestates.com",
+      "specialization": [
+        "Penthouses",
+        "New developments",
+        "Design-focused buyers"
+      ],
+      "bio": "Maya specializes in high-design residences and curated purchase journeys. Her clients value her eye for detail, developer relationships, and ability to align homes with long-term lifestyle goals.",
+      "serviceAreas": [
+        "Miami Beach",
+        "Brickell",
+        "Surfside"
+      ]
+    },
+    {
+      "id": "agent-04",
+      "slug": "oliver-reed",
+      "name": "Oliver Reed",
+      "title": "Residential Investment Advisor",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
+      "experience": 11,
+      "activeListings": 14,
+      "rating": 4.7,
+      "reviews": 87,
+      "languages": [
+        "English"
+      ],
+      "phone": "+1 (702) 555-0121",
+      "email": "oliver@aureviaestates.com",
+      "specialization": [
+        "Rental yields",
+        "Vacation homes",
+        "Portfolio strategy"
+      ],
+      "bio": "Oliver connects data-backed investment thinking with premium residential inventory. He helps buyers evaluate revenue potential, holding costs, and resale timing with unusual clarity.",
+      "serviceAreas": [
+        "Scottsdale",
+        "Austin",
+        "Nashville"
+      ]
+    }
+  ],
+  "tours": [],
+  "inquiries": [],
+  "subscribers": [],
+  "favorites": []
+}

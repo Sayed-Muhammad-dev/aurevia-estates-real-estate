@@ -3,7 +3,7 @@
 import { Bath, BedDouble, Heart, MapPin, Ruler, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { agents } from "@/data/agents";
+import { useAgents } from "@/components/providers/property-data";
 import { useSaved } from "@/components/providers/saved-provider";
 import { useToast } from "@/components/providers/toast-provider";
 import { Badge } from "@/components/ui/badge";
@@ -18,19 +18,27 @@ export function PropertyCard({
   property: Property;
   view?: "grid" | "list";
 }) {
-  const { saved, toggleSaved } = useSaved();
+  const { saved, saving, toggleSaved } = useSaved();
+  const agents = useAgents();
   const { showToast } = useToast();
   const isSaved = saved.includes(property.id);
   const agent = agents.find((entry) => entry.id === property.agentId);
 
-  const handleSave = () => {
-    const next = toggleSaved(property.id);
-    showToast(
-      next ? "Property saved" : "Property removed",
-      next
-        ? `${property.title} has been added to your saved properties.`
-        : `${property.title} has been removed from your saved properties.`,
-    );
+  const handleSave = async () => {
+    try {
+      const next = await toggleSaved(property.id);
+      showToast(
+        next ? "Property saved" : "Property removed",
+        next
+          ? `${property.title} has been added to your saved properties.`
+          : `${property.title} has been removed from your saved properties.`,
+      );
+    } catch (error) {
+      showToast(
+        "Saved home not changed",
+        error instanceof Error ? error.message : "Please retry.",
+      );
+    }
   };
 
   return (
@@ -50,12 +58,17 @@ export function PropertyCard({
           }`}
         />
         <div className="absolute inset-x-0 top-0 flex items-start justify-between p-4">
-          <Badge tone={property.featured ? "accent" : "default"}>{property.status}</Badge>
+          <Badge tone={property.featured ? "accent" : "default"}>
+            {property.status}
+          </Badge>
           <button
             type="button"
             onClick={handleSave}
+            disabled={saving}
             className={`rounded-full p-3 backdrop-blur ${
-              isSaved ? "bg-accent text-slate-950" : "bg-slate-950/40 text-white"
+              isSaved
+                ? "bg-accent text-slate-950"
+                : "bg-slate-950/40 text-white"
             }`}
             aria-label={isSaved ? "Remove saved property" : "Save property"}
           >
@@ -104,7 +117,9 @@ export function PropertyCard({
           </div>
         </div>
 
-        <p className="mt-5 line-clamp-3 text-sm leading-7 text-muted">{property.description}</p>
+        <p className="mt-5 line-clamp-3 text-sm leading-7 text-muted">
+          {property.description}
+        </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap gap-2">
@@ -115,14 +130,25 @@ export function PropertyCard({
         </div>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Button href={`/properties/${property.slug}`} variant="secondary" className="flex-1 min-w-[10rem]">
+          <Button
+            href={`/properties/${property.slug}`}
+            variant="secondary"
+            className="flex-1 min-w-[10rem]"
+          >
             View Property
           </Button>
-          <Button href={`/booking?property=${property.slug}`} className="flex-1 min-w-[10rem]">
+          <Button
+            href={`/booking?property=${property.slug}`}
+            className="flex-1 min-w-[10rem]"
+          >
             Book Visit
           </Button>
           {agent ? (
-            <Button href={`/contact?agent=${agent.slug}&property=${property.slug}`} variant="ghost" className="min-w-[10rem]">
+            <Button
+              href={`/contact?agent=${agent.slug}&property=${property.slug}`}
+              variant="ghost"
+              className="min-w-[10rem]"
+            >
               Contact Agent
             </Button>
           ) : null}

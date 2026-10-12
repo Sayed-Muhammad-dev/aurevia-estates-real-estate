@@ -1,5 +1,6 @@
 "use client";
 
+import { applicationRequest } from "@/lib/application";
 import { useState } from "react";
 import { isValidEmail } from "@/lib/forms";
 import { Button } from "@/components/ui/button";
@@ -19,7 +20,13 @@ const initialForm: ContactFormValues = {
   message: "",
 };
 
-export function ContactForm({ defaultInterest, defaultMessage }: { defaultInterest?: string; defaultMessage?: string }) {
+export function ContactForm({
+  defaultInterest,
+  defaultMessage,
+}: {
+  defaultInterest?: string;
+  defaultMessage?: string;
+}) {
   const { showToast } = useToast();
   const initialState = {
     ...initialForm,
@@ -29,8 +36,11 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
   const [form, setForm] = useState<ContactFormValues>({
     ...initialState,
   });
-  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormValues, string>>>({});
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof ContactFormValues, string>>
+  >({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const validate = () => {
     const nextErrors: Partial<Record<keyof ContactFormValues, string>> = {};
@@ -44,7 +54,8 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
     }
 
     if (form.message.trim().length < 20) {
-      nextErrors.message = "Include at least 20 characters so the team can respond properly.";
+      nextErrors.message =
+        "Include at least 20 characters so the team can respond properly.";
     }
 
     setErrors(nextErrors);
@@ -53,16 +64,32 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
         if (!validate()) {
           setSubmitted(false);
           return;
         }
 
+        if (submitting) return;
+        setSubmitting(true);
+        try {
+          await applicationRequest("submit/inquiries", form);
+        } catch (error) {
+          setErrors({
+            message:
+              error instanceof Error ? error.message : "Could not send message",
+          });
+          return;
+        } finally {
+          setSubmitting(false);
+        }
         setSubmitted(true);
         setErrors({});
-        showToast("Message sent", "An Aurevia advisor will respond within one business day.");
+        showToast(
+          "Message received",
+          "Your enquiry is saved for an advisor to review.",
+        );
         setForm(initialState);
       }}
       className="rounded-[2rem] border border-line bg-panel p-6 shadow-luxury"
@@ -79,7 +106,9 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
             }}
             className="field"
           />
-          {errors.name ? <span className="text-xs text-danger">{errors.name}</span> : null}
+          {errors.name ? (
+            <span className="text-xs text-danger">{errors.name}</span>
+          ) : null}
         </label>
         <label className="space-y-2 text-sm text-muted">
           <span>Email</span>
@@ -93,7 +122,9 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
             }}
             className="field"
           />
-          {errors.email ? <span className="text-xs text-danger">{errors.email}</span> : null}
+          {errors.email ? (
+            <span className="text-xs text-danger">{errors.email}</span>
+          ) : null}
         </label>
         <label className="space-y-2 text-sm text-muted md:col-span-2">
           <span>What do you need?</span>
@@ -123,16 +154,20 @@ export function ContactForm({ defaultInterest, defaultMessage }: { defaultIntere
             className="field min-h-36"
             placeholder="Share your preferred markets, budget, timeline, and anything else we should know."
           />
-          {errors.message ? <span className="text-xs text-danger">{errors.message}</span> : null}
+          {errors.message ? (
+            <span className="text-xs text-danger">{errors.message}</span>
+          ) : null}
         </label>
       </div>
       {submitted ? (
         <div className="mt-6 rounded-2xl border border-success/20 bg-success/10 px-4 py-3 text-sm text-success">
-          Inquiry submitted successfully. The advisory team will contact you shortly.
+          Your inquiry is saved in the advisory inbox for review.
         </div>
       ) : null}
       <div className="mt-6">
-        <Button type="submit">Send inquiry</Button>
+        <Button type="submit" disabled={submitting}>
+          {submitting ? "Saving inquiry…" : "Send inquiry"}
+        </Button>
       </div>
     </form>
   );

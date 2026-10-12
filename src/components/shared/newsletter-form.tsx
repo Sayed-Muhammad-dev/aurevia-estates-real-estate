@@ -1,5 +1,6 @@
 "use client";
 
+import { applicationRequest } from "@/lib/application";
 import { useState } from "react";
 import { isValidEmail } from "@/lib/forms";
 import { useToast } from "@/components/providers/toast-provider";
@@ -13,7 +14,7 @@ export function NewsletterForm() {
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
         if (!isValidEmail(email)) {
           setSuccess(false);
@@ -22,8 +23,21 @@ export function NewsletterForm() {
         }
 
         setError("");
+        try {
+          await applicationRequest("submit/subscribers", { email });
+        } catch (error) {
+          setError(
+            error instanceof Error
+              ? error.message
+              : "Subscription request failed",
+          );
+          return;
+        }
         setSuccess(true);
-        showToast("Subscribed", "You will receive weekly market briefings and newly released listings.");
+        showToast(
+          "Request saved",
+          "Your email is saved for the team to review.",
+        );
         setEmail("");
       }}
       className="space-y-3"
@@ -48,7 +62,9 @@ export function NewsletterForm() {
         <Button type="submit">Join newsletter</Button>
       </div>
       {error ? <p className="text-sm text-danger">{error}</p> : null}
-      {success ? <p className="text-sm text-success">Subscription confirmed.</p> : null}
+      {success ? (
+        <p className="text-sm text-success">Subscription request received.</p>
+      ) : null}
     </form>
   );
 }

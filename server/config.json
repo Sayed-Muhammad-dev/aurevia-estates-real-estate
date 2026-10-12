@@ -1,0 +1,353 @@
+{
+  "id": "aurevia",
+  "name": "Aurevia Estates",
+  "accent": "#ceb07b",
+  "notice": "Property listings are demonstration inventory. Viewing slots use UTC; reservations request a viewing rather than purchasing a property.",
+  "collections": {
+    "properties": {
+      "label": "Properties",
+      "cms": true,
+      "fields": {
+        "id": {
+          "type": "text",
+          "optional": true
+        },
+        "slug": {
+          "type": "text",
+          "optional": false
+        },
+        "title": {
+          "type": "text",
+          "optional": false
+        },
+        "city": {
+          "type": "text",
+          "optional": false
+        },
+        "area": {
+          "type": "text",
+          "optional": false
+        },
+        "address": {
+          "type": "text",
+          "optional": false
+        },
+        "mode": {
+          "type": "text",
+          "options": [
+            "buy",
+            "rent"
+          ]
+        },
+        "type": {
+          "type": "text",
+          "options": [
+            "Penthouse",
+            "Villa",
+            "Apartment",
+            "Townhouse",
+            "Waterfront",
+            "Loft"
+          ]
+        },
+        "status": {
+          "type": "text",
+          "optional": false
+        },
+        "price": {
+          "type": "number",
+          "min": 1
+        },
+        "bedrooms": {
+          "type": "number",
+          "min": 0
+        },
+        "bathrooms": {
+          "type": "number",
+          "min": 0
+        },
+        "areaSqft": {
+          "type": "number",
+          "min": 0
+        },
+        "yearBuilt": {
+          "type": "number",
+          "min": 0
+        },
+        "furnished": {
+          "type": "boolean"
+        },
+        "parking": {
+          "type": "number",
+          "min": 0
+        },
+        "featured": {
+          "type": "boolean"
+        },
+        "rating": {
+          "type": "number",
+          "min": 0
+        },
+        "views": {
+          "type": "number",
+          "min": 0
+        },
+        "images": {
+          "type": "array"
+        },
+        "coverAlt": {
+          "type": "text",
+          "optional": false
+        },
+        "description": {
+          "type": "text",
+          "optional": false
+        },
+        "keyFeatures": {
+          "type": "array"
+        },
+        "amenities": {
+          "type": "array"
+        },
+        "nearby": {
+          "type": "array",
+          "fields": {
+            "name": {
+              "type": "text",
+              "optional": false
+            },
+            "distance": {
+              "type": "text",
+              "optional": false
+            },
+            "type": {
+              "type": "text",
+              "optional": false
+            }
+          }
+        },
+        "floorPlan": {
+          "type": "object",
+          "fields": {
+            "label": {
+              "type": "text",
+              "optional": false
+            },
+            "description": {
+              "type": "text",
+              "optional": false
+            },
+            "dimensions": {
+              "type": "text",
+              "optional": false
+            }
+          }
+        },
+        "coordinates": {
+          "type": "object",
+          "fields": {
+            "x": {
+              "type": "number",
+              "min": 0
+            },
+            "y": {
+              "type": "number",
+              "min": 0
+            }
+          }
+        },
+        "agentId": {
+          "type": "text",
+          "optional": false,
+          "reference": "agents"
+        }
+      }
+    },
+    "agents": {
+      "label": "Agents",
+      "cms": true,
+      "fields": {
+        "id": {
+          "type": "text",
+          "optional": true
+        },
+        "slug": {
+          "type": "text",
+          "optional": false
+        },
+        "name": {
+          "type": "text",
+          "optional": false
+        },
+        "title": {
+          "type": "text",
+          "optional": false
+        },
+        "image": {
+          "type": "url",
+          "optional": true
+        },
+        "experience": {
+          "type": "number",
+          "min": 0
+        },
+        "activeListings": {
+          "type": "number",
+          "min": 0
+        },
+        "rating": {
+          "type": "number",
+          "min": 0
+        },
+        "reviews": {
+          "type": "number",
+          "min": 0
+        },
+        "languages": {
+          "type": "array"
+        },
+        "phone": {
+          "type": "text",
+          "optional": false
+        },
+        "email": {
+          "type": "email"
+        },
+        "specialization": {
+          "type": "array"
+        },
+        "bio": {
+          "type": "text",
+          "optional": false
+        },
+        "serviceAreas": {
+          "type": "array"
+        }
+      }
+    },
+    "tours": {
+      "label": "Property viewings",
+      "cms": false,
+      "fields": {
+        "property": {
+          "type": "text",
+          "optional": false,
+          "reference": "properties",
+          "referenceValue": "title"
+        },
+        "name": {
+          "type": "text",
+          "optional": false
+        },
+        "email": {
+          "type": "email"
+        },
+        "phone": {
+          "type": "text",
+          "optional": false
+        },
+        "date": {
+          "type": "date"
+        },
+        "time": {
+          "type": "text",
+          "optional": false
+        },
+        "visitType": {
+          "type": "text",
+          "options": [
+            "In-person",
+            "Virtual",
+            "Private evening tour"
+          ]
+        },
+        "message": {
+          "type": "text",
+          "optional": true
+        },
+        "status": {
+          "type": "text",
+          "options": [
+            "requested",
+            "confirmed",
+            "completed",
+            "cancelled"
+          ],
+          "optional": true
+        },
+        "ownerId": {
+          "type": "text",
+          "optional": true
+        }
+      },
+      "publicSubmit": true,
+      "initialStatus": "requested",
+      "member": true
+    },
+    "inquiries": {
+      "label": "Contact inbox",
+      "cms": false,
+      "fields": {
+        "name": {
+          "type": "text",
+          "optional": false
+        },
+        "email": {
+          "type": "email"
+        },
+        "message": {
+          "type": "text",
+          "optional": false
+        },
+        "interest": {
+          "type": "text",
+          "optional": true
+        },
+        "status": {
+          "type": "text",
+          "options": [
+            "new",
+            "in-progress",
+            "resolved"
+          ],
+          "optional": true
+        }
+      },
+      "publicSubmit": true
+    },
+    "subscribers": {
+      "label": "Newsletter subscribers",
+      "cms": false,
+      "fields": {
+        "email": {
+          "type": "email"
+        },
+        "status": {
+          "type": "text",
+          "options": [
+            "new",
+            "active",
+            "unsubscribed"
+          ],
+          "optional": true
+        }
+      },
+      "publicSubmit": true
+    },
+    "favorites": {
+      "label": "My saved homes",
+      "member": true,
+      "fields": {
+        "propertyId": {
+          "type": "text",
+          "reference": "properties"
+        },
+        "ownerId": {
+          "type": "text",
+          "optional": true
+        }
+      },
+      "private": true
+    }
+  }
+}

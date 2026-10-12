@@ -18,7 +18,7 @@ export function PropertyDetailActions({
   agentSlug?: string;
 }) {
   const router = useRouter();
-  const { saved, toggleSaved } = useSaved();
+  const { saved, saving, toggleSaved } = useSaved();
   const { showToast } = useToast();
   const isSaved = saved.includes(propertyId);
 
@@ -27,12 +27,22 @@ export function PropertyDetailActions({
       <Button
         variant="secondary"
         className="gap-2"
-        onClick={() => {
-          const next = toggleSaved(propertyId);
-          showToast(
-            next ? "Property saved" : "Property removed",
-            next ? `${propertyTitle} is now in your shortlist.` : `${propertyTitle} was removed from your shortlist.`,
-          );
+        disabled={saving}
+        onClick={async () => {
+          try {
+            const next = await toggleSaved(propertyId);
+            showToast(
+              next ? "Property saved" : "Property removed",
+              next
+                ? `${propertyTitle} is now in your shortlist.`
+                : `${propertyTitle} was removed from your shortlist.`,
+            );
+          } catch (error) {
+            showToast(
+              "Saved home not changed",
+              error instanceof Error ? error.message : "Please retry.",
+            );
+          }
         }}
       >
         <Heart className={`h-4 w-4 ${isSaved ? "fill-current" : ""}`} />
@@ -41,22 +51,49 @@ export function PropertyDetailActions({
       <Button
         variant="secondary"
         className="gap-2"
-        onClick={() => {
+        onClick={async () => {
           const url = typeof window !== "undefined" ? window.location.href : "";
-          if (typeof navigator !== "undefined" && navigator.share) {
-            navigator.share({ title: propertyTitle, url }).catch(() => undefined);
-          } else if (typeof navigator !== "undefined" && navigator.clipboard) {
-            navigator.clipboard.writeText(url).catch(() => undefined);
+          try {
+            if (typeof navigator !== "undefined" && navigator.share) {
+              await navigator.share({ title: propertyTitle, url });
+              showToast("Property shared", "The property link was shared.");
+            } else if (
+              typeof navigator !== "undefined" &&
+              navigator.clipboard
+            ) {
+              await navigator.clipboard.writeText(url);
+              showToast(
+                "Link copied",
+                "This property link is ready to share with a partner or advisor.",
+              );
+            } else {
+              showToast(
+                "Share this page",
+                "Copy the address from your browser.",
+              );
+            }
+          } catch (error) {
+            if (!(error instanceof Error && error.name === "AbortError"))
+              showToast(
+                "Could not share",
+                "Copy the address from your browser.",
+              );
           }
-          showToast("Link copied", "This property link is ready to share with a partner or advisor.");
         }}
       >
         <Share2 className="h-4 w-4" />
         Share
       </Button>
-      <Button onClick={() => router.push(`/booking?property=${propertySlug}`)}>Book Visit</Button>
+      <Button onClick={() => router.push(`/booking?property=${propertySlug}`)}>
+        Book Visit
+      </Button>
       {agentSlug ? (
-        <Button variant="ghost" onClick={() => router.push(`/contact?agent=${agentSlug}&property=${propertySlug}`)}>
+        <Button
+          variant="ghost"
+          onClick={() =>
+            router.push(`/contact?agent=${agentSlug}&property=${propertySlug}`)
+          }
+        >
           Contact Agent
         </Button>
       ) : null}
