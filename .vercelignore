@@ -3,3 +3,5 @@
 .env.local
 .env.production
 .env.development
+# Private environment exports and credential backups
+.env*

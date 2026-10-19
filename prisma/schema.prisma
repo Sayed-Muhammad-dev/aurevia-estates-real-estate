@@ -1,0 +1,11 @@
+datasource db {
+  provider = "postgresql"
+}
+
+model ApplicationState {
+  application_key String @id @db.Text
+  payload Json @db.JsonB
+  revision Int
+
+  @@map("application_state")
+}
